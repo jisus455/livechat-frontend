@@ -1,0 +1,5 @@
+<!-- <h1>AppComponent</h1> -->
+<!-- <app-chat></app-chat> -->
+<app-login *ngIf="!logeado" (newItemEvent)="sendData($event)"></app-login>
+<app-chat *ngIf="logeado" (newItemEvent)="sendData2($event)" [datalogin]="data"></app-chat>
+<!-- <router-outlet></router-outlet> -->

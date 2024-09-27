@@ -1,0 +1,50 @@
+.seccion-usuarios{
+    height: 100vh; 
+    background-color: #181818;
+}
+
+.caja-usuarios{
+    max-height: 85vh; 
+    overflow-y: scroll;
+}
+
+.usuario{
+    background-color: #242424;
+}
+
+.seccion-mensajes{
+    height: 100vh; 
+    background-color: #242424;
+}
+
+.caja-mensajes{
+    max-height: 74vh; 
+    overflow-y: scroll;
+}
+
+#mensajes-enviados{
+    background-color: #343434;
+}
+
+.imagen-chat{
+    margin: 30vh 55vh;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    width: 5px;
+    background: #181818;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    width: 1em;
+    background-color: #181818;
+    outline: 1px solid dodgerblue;
+    border-radius: 1rem;
+  }
+
+

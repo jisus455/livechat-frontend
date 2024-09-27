@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row justify-content-center" *ngIf="signin">
+        <div class="col">
+            <div class="card mb-3 text-bg-dark">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+
+                            <h4 class="card-title">Crear cuenta</h4>
+                            <hr>
+
+                            <label class="form-label" for="nombre">Nombre</label>
+                            <input class="form-control text-bg-dark mb-4" type="text" [(ngModel)]="nombre">
+
+                            <label class="form-label" for="email">Correo electronico</label>
+                            <input class="form-control text-bg-dark mb-4" type="email" [(ngModel)]="email">
+
+                            <label class="form-label" for="clave">Contraseña</label>
+                            <input class="form-control text-bg-dark mb-4" type="password" [(ngModel)]="clave">
+
+                            <div class="alert alert-primary alert-dismissible fade show mt-4" role="alert" *ngIf="alert">
+                                <strong></strong> {{alertMessage}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+
+                            <button class="btn btn-outline-primary" type="button" (click)="registro()">Continuar</button>
+                            <button class="btn btn-outline-secondary ms-2" type="button" (click)="signin = false" (click)="login = true">
+                                Iniciar sesion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="login">
+        <div class="col">
+            <div class="card mb-3 text-bg-dark">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+
+                            <h4 class="card-title">Iniciar sesion</h4>
+                            <hr>
+
+                            <label class="form-label" for="email">Correo electronico</label>
+                            <input class="form-control text-bg-dark mb-4" type="email" [(ngModel)]="email">
+
+                            <label class="form-label" for="clave">Contraseña</label>
+                            <input class="form-control text-bg-dark mb-4" type="password" [(ngModel)]="clave">
+
+                            <div class="alert alert-primary alert-dismissible fade show mt-4" role="alert" *ngIf="alert">
+                                {{alertMessage}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+
+                            <button class="btn btn-outline-primary" type="button" (click)="iniciarSesion()">Iniciar
+                                sesion</button>
+                            <button class="btn btn-outline-secondary ms-2" type="button" (click)="login = false" (click)="signin = true">
+                                Crear cuenta</button>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
